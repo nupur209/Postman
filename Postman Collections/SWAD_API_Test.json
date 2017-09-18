@@ -1990,6 +1990,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "e7d70ff5-a584-3941-b6b9-ca5c718135b1",
+      "name": "Register Category",
+      "description": "",
+      "item": []
     }
   ]
 }
