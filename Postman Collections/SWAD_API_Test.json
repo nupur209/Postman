@@ -1990,6 +1990,25 @@
         {
           "_postman_id": "e5d25d14-24ff-3500-3aa8-e61c19e773c4",
           "name": "Register Category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api//category",
             "method": "POST",
