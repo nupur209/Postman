@@ -2028,7 +2028,7 @@
         },
         {
           "_postman_id": "7d360fa5-3dc5-66fe-268f-d435dc60cd09",
-          "name": "Register Category copy",
+          "name": "Register Category with duplicate category",
           "event": [
             {
               "listen": "test",
