@@ -835,7 +835,7 @@
             }
           ],
           "request": {
-            "url": "http://192.168.129.143:5000/api/user/",
+            "url": "http://192.168.129.143:5000/api/user/XER001@gmail.com",
             "method": "GET",
             "header": [
               {
@@ -850,10 +850,7 @@
                 "disabled": true
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
+            "body": {},
             "description": "API is used for get user"
           },
           "response": []
