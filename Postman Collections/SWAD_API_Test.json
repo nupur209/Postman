@@ -1368,44 +1368,6 @@
             "description": ""
           },
           "response": []
-        },
-        {
-          "_postman_id": "d483b3e7-0803-b1c0-5dfe-98b0528cc614",
-          "name": "RegisterProductUser_WithoutLastName",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
-                  ""
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "http://192.168.129.143:5000/api/product",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
-            },
-            "description": ""
-          },
-          "response": []
         }
       ]
     },
