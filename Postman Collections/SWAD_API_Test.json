@@ -806,10 +806,7 @@
                 "disabled": true
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
+            "body": {},
             "description": "API is used for get user"
           },
           "response": []
