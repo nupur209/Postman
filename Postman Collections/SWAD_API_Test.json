@@ -862,9 +862,6 @@
                 "type": "text/javascript",
                 "exec": [
                   "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});",
                   "",
                   "pm.test(\"Response time is less than 200ms\", function () {",
                   "    pm.expect(pm.response.responseTime).to.be.below(500);",
