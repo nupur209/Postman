@@ -2025,6 +2025,45 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "7d360fa5-3dc5-66fe-268f-d435dc60cd09",
+          "name": "Register Category copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api//category",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     }
