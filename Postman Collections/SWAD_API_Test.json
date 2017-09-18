@@ -2076,7 +2076,7 @@
       "_postman_id": "b7638e63-67be-80b7-e974-a77488df5793",
       "name": "http://192.168.129.143:5000/api/category{id}",
       "request": {
-        "url": "http://192.168.129.143:5000/api/category/59bfa0c48b9c9b0568172513",
+        "url": "http://192.168.129.143:5000/api/category/_id",
         "method": "GET",
         "header": [],
         "body": {},
