@@ -2009,8 +2009,8 @@
             }
           ],
           "request": {
-            "url": "http://192.168.129.143:5000/api//category",
-            "method": "POST",
+            "url": "http://192.168.129.143:5000/api/category",
+            "method": "GET",
             "header": [
               {
                 "key": "Content-Type",
