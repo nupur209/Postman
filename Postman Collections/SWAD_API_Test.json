@@ -1986,7 +1986,23 @@
       "_postman_id": "e7d70ff5-a584-3941-b6b9-ca5c718135b1",
       "name": "Register Category",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "e5d25d14-24ff-3500-3aa8-e61c19e773c4",
+          "name": "Register Category",
+          "request": {
+            "url": "http://192.168.129.143:5000/api//category",
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"Mobile\",\r\n  \"categorydescription\": \"Touch Screen\"\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
