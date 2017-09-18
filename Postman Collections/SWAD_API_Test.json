@@ -2066,6 +2066,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "eeba4b32-52a8-f995-401d-23ba6a2c7aff",
+      "name": "8_GetCategory",
+      "description": "",
+      "item": []
     }
   ]
 }
