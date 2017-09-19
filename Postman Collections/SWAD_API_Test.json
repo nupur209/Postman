@@ -2331,6 +2331,19 @@
         {
           "_postman_id": "04d489e3-167a-f3e8-f9e5-1485f9cb92ff",
           "name": "GetMenuByProductID without Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/menu",
             "method": "GET",
