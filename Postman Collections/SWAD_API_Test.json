@@ -2309,6 +2309,29 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "04d489e3-167a-f3e8-f9e5-1485f9cb92ff",
+          "name": "GetMenuByProductID with Valid Authorization copy",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/menu",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     }
