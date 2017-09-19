@@ -2609,7 +2609,7 @@
         },
         {
           "_postman_id": "7d3e1c38-e520-8263-ccbf-e91bbd8c119b",
-          "name": "Update with Valid input copy",
+          "name": "Update with Invalid input ",
           "event": [
             {
               "listen": "test",
