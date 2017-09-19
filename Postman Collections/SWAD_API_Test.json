@@ -2416,6 +2416,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "84931ff9-afb4-75ed-8db5-9e21900a58ed",
+      "name": "12_RegisterAttraction",
+      "description": "",
+      "item": []
     }
   ]
 }
