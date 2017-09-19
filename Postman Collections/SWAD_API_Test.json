@@ -2425,6 +2425,24 @@
         {
           "_postman_id": "960584c3-ecc1-e77a-293e-bacb32b29b8b",
           "name": "Register Attraction with Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
             "method": "POST",
