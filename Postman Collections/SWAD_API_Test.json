@@ -2149,6 +2149,24 @@
         {
           "_postman_id": "1ec329b7-f7d1-425f-af0b-1b19512d1a3e",
           "name": "RegisterMenu with Valid Input",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api//product/59afe50950ad2119c01be4e0/menu",
             "method": "POST",
