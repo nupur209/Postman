@@ -2192,7 +2192,7 @@
         },
         {
           "_postman_id": "1f7ad75c-2dad-5385-d12a-58a5e81ebe5b",
-          "name": "RegisterMenu with Valid Input copy",
+          "name": "RegisterMenu without Authorization",
           "event": [
             {
               "listen": "test",
