@@ -2092,7 +2092,7 @@
     },
     {
       "_postman_id": "63c26810-78d4-de59-b5e3-8b1cef2e29ce",
-      "name": "GetCategory with valid Authorization copy",
+      "name": "GetCategory without Authorization",
       "request": {
         "url": "http://192.168.129.143:5000/api/category",
         "method": "GET",
