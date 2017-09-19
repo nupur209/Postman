@@ -2651,7 +2651,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"1209/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
             "description": ""
           },
