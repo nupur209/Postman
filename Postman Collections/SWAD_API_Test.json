@@ -2072,6 +2072,38 @@
       "description": "",
       "item": [
         {
+          "_postman_id": "63c26810-78d4-de59-b5e3-8b1cef2e29ce",
+          "name": "GetCategory without Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/category",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": "",
+                "disabled": true
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        },
+        {
           "_postman_id": "b7638e63-67be-80b7-e974-a77488df5793",
           "name": "GetCategory with valid Authorization",
           "event": [
@@ -2100,38 +2132,6 @@
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
                 "description": ""
-              }
-            ],
-            "body": {},
-            "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "63c26810-78d4-de59-b5e3-8b1cef2e29ce",
-          "name": "GetCategory without Authorization",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Response time is less than 200ms\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "http://192.168.129.143:5000/api/category",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "description": "",
-                "disabled": true
               }
             ],
             "body": {},
