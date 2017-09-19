@@ -2618,8 +2618,8 @@
                 "exec": [
                   "",
                   "var jsonData = pm.response.json();",
-                  "pm.test(\"Unable to update attraction data.--\"+jsonData.message, function () {",
-                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data.\");",
+                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
                   "});",
                   "",
                   "",
