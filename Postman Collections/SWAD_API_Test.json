@@ -2551,6 +2551,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "a49126ab-ebec-9fac-7452-a61cd7817580",
+      "name": "13_Update Attraction",
+      "description": "",
+      "item": []
     }
   ]
 }
