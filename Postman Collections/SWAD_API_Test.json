@@ -2616,20 +2616,16 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});",
-                  "",
-                  "",
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});",
                   "",
                   "var jsonData = pm.response.json();",
                   "pm.test(\"Attraction updated successfully.--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"Attraction updated successfully.\");",
                   "});",
-                  ""
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
                 ]
               }
             }
