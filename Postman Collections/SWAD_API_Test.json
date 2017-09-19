@@ -2111,6 +2111,19 @@
     {
       "_postman_id": "63c26810-78d4-de59-b5e3-8b1cef2e29ce",
       "name": "GetCategory without Authorization",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Response time is less than 200ms\", function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(200);",
+              "});"
+            ]
+          }
+        }
+      ],
       "request": {
         "url": "http://192.168.129.143:5000/api/category",
         "method": "GET",
