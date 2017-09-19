@@ -2206,7 +2206,13 @@
                   "",
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
-                  "});"
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Menu validation failed--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Menu validation failed\");",
+                  "});",
+                  ""
                 ]
               }
             }
