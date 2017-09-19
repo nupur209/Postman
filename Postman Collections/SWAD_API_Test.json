@@ -2073,6 +2073,12 @@
       "item": []
     },
     {
+      "_postman_id": "faa27343-fd60-1fbe-b3d3-19289d9bdc17",
+      "name": "8_RegisterMenu",
+      "description": "",
+      "item": []
+    },
+    {
       "_postman_id": "b7638e63-67be-80b7-e974-a77488df5793",
       "name": "GetCategory with valid Authorization",
       "event": [
