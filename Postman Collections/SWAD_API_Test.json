@@ -2568,6 +2568,11 @@
                 "key": "Content-Type",
                 "value": "application/json",
                 "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
