@@ -2556,7 +2556,29 @@
       "_postman_id": "a49126ab-ebec-9fac-7452-a61cd7817580",
       "name": "13_Update Attraction",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "18e07937-4851-0050-136b-79fdc2b9129f",
+          "name": "Update with Valid input",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
