@@ -2192,7 +2192,7 @@
         },
         {
           "_postman_id": "f9c85474-0ea5-a93a-44bd-10e9050d920b",
-          "name": "RegisterMenu with Valid Input copy",
+          "name": "RegisterMenu with Invalid Currency",
           "event": [
             {
               "listen": "test",
