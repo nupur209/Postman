@@ -2468,7 +2468,7 @@
         },
         {
           "_postman_id": "18227158-bcc3-bc14-7c58-e15dd5ccf3fa",
-          "name": "Register Attraction with Authorization copy",
+          "name": "Register Attraction without Authorization",
           "event": [
             {
               "listen": "test",
