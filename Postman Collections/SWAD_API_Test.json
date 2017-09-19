@@ -2371,7 +2371,29 @@
       "_postman_id": "5e6fdd48-8893-efb9-5fea-6e389351c7d7",
       "name": "11_UpdateMenu",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "6668092c-7db6-43a1-6c98-d4bdf6191619",
+          "name": "UpdateMenu with valid parameter",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/menu",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 800\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikki\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
