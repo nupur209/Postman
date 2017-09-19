@@ -2145,7 +2145,29 @@
       "_postman_id": "faa27343-fd60-1fbe-b3d3-19289d9bdc17",
       "name": "8_RegisterMenu",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "1ec329b7-f7d1-425f-af0b-1b19512d1a3e",
+          "name": "RegisterMenu with Valid Input",
+          "request": {
+            "url": "http://192.168.129.143:5000/api//product/59afe50950ad2119c01be4e0/menu",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 500\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
