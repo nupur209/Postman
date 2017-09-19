@@ -2440,7 +2440,10 @@
                 "description": ""
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"12/09/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22/09/2017\"\r\n  },\r\n  \"updated_date\": \"22/09/2017\"\r\n}"
+            },
             "description": ""
           },
           "response": []
