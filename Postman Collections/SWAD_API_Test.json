@@ -2505,6 +2505,50 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "21321aa6-39b0-bfcc-4a50-f0b45a35133d",
+          "name": "Register Attraction with Authorization copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
         }
       ]
     }
