@@ -2468,7 +2468,7 @@
         },
         {
           "_postman_id": "21321aa6-39b0-bfcc-4a50-f0b45a35133d",
-          "name": "Register Attraction with Authorization copy",
+          "name": "Register Attraction with invalid inputs",
           "event": [
             {
               "listen": "test",
