@@ -2286,7 +2286,20 @@
       "_postman_id": "1effcdd4-4206-bef0-9b5c-65461f6bdb53",
       "name": "9_GetMenuByProductID",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "5fb7da11-12e1-19e7-9ae3-d1d970af6bde",
+          "name": "GetMenuByProductID",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/menu",
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
