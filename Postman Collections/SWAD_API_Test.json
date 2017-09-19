@@ -2421,7 +2421,20 @@
       "_postman_id": "84931ff9-afb4-75ed-8db5-9e21900a58ed",
       "name": "12_RegisterAttraction",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "960584c3-ecc1-e77a-293e-bacb32b29b8b",
+          "name": "Register Attraction with Authorization",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
+            "method": "POST",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
