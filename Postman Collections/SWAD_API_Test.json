@@ -2020,7 +2020,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+              "raw": "{\r\n  \"category\": \"Mobile2\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
             },
             "description": ""
           },
