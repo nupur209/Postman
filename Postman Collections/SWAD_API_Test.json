@@ -338,7 +338,7 @@
       "item": [
         {
           "_postman_id": "ee7f8ed9-6514-a4d2-54bf-b1990f489bd2",
-          "name": "LoginFor_User",
+          "name": "Login with valid credential",
           "event": [
             {
               "listen": "test",
