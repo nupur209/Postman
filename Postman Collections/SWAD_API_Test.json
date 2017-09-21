@@ -21,7 +21,7 @@
               "script": {
                 "type": "text/javascript",
                 "exec": [
-                  "",
+                  " ",
                   "var data = JSON.parse(responseBody);",
                   "var user_ids=data.user.userid",
                   "console.log(\"User ID  is----\"+user_ids);",
