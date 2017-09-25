@@ -2815,7 +2815,10 @@
                 "description": ""
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Winter Sale\"\r\n  }\r\n}"
+            },
             "description": ""
           },
           "response": []
