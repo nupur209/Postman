@@ -2762,41 +2762,8 @@
             "description": ""
           },
           "response": []
-        },
-        {
-          "_postman_id": "cc3cd2ed-31b2-8d6a-40c8-ec11932930fe",
-          "name": "Register Product Offer without Authorization",
-          "request": {
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "description": "",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
-            },
-            "description": ""
-          },
-          "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "80c6188a-1847-584b-c6c8-70edb97994da",
-      "name": "16_Update Product Offer",
-      "description": "",
-      "item": []
     }
   ]
 }
