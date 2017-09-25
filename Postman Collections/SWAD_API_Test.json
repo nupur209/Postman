@@ -2791,6 +2791,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "80c6188a-1847-584b-c6c8-70edb97994da",
+      "name": "Update Product Offer",
+      "description": "",
+      "item": []
     }
   ]
 }
