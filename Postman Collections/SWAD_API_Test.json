@@ -2682,6 +2682,29 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "7514e5c3-0627-a0b7-f2fc-8bedc29f8ce6",
+          "name": "Get Attraction by Valid ProductID  & Authorization copy",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
         }
       ]
     }
