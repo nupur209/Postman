@@ -2731,6 +2731,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "5dde450f-2fc2-6b68-b7d9-45066da2156e",
+      "name": "Register Product Offer",
+      "description": "",
+      "item": []
     }
   ]
 }
