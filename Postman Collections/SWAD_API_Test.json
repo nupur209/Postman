@@ -2003,7 +2003,12 @@
                   "",
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
-                  "});"
+                  "});",
+                  "",
+                  "var data = JSON.parse(responseBody);",
+                  "var cat=data.category.category",
+                  "console.log(\"Category  is----\"+cat);",
+                  "postman.setGlobalVariable(\"category\", cat);"
                 ]
               }
             },
