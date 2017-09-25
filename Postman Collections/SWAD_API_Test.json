@@ -2854,6 +2854,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "ae0cc3f4-8a5c-3ca6-65b3-8f011225216c",
+      "name": "Register comment rating",
+      "description": "Register comment rating",
+      "item": []
     }
   ]
 }
