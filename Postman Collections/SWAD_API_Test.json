@@ -2741,7 +2741,7 @@
           "_postman_id": "1b241071-51e0-b4b9-dfe1-d1913bb08c6f",
           "name": "Register Product Offer with valid inputs",
           "request": {
-            "url": "http://192.168.129.143:5000/api/product/{productid}/productOffer",
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "POST",
             "header": [
               {
