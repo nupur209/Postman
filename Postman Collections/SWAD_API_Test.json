@@ -2736,7 +2736,34 @@
       "_postman_id": "5dde450f-2fc2-6b68-b7d9-45066da2156e",
       "name": "15_Register Product Offer",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "1b241071-51e0-b4b9-dfe1-d1913bb08c6f",
+          "name": "Register Product Offer with valid inputs",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{productid}/productOffer",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"string\",\r\n    \"updated_date\": \"string\"\r\n  }\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
