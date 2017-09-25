@@ -2006,6 +2006,20 @@
                   "});"
                 ]
               }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
+                  "console.log(text);"
+                ]
+              }
             }
           ],
           "request": {
@@ -2020,7 +2034,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"category\": \"Mobile2\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+              "raw": "{\r\n  \"category\": \"{{Cat}}\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
             },
             "description": ""
           },
