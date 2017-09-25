@@ -2368,7 +2368,7 @@
             }
           ],
           "request": {
-            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/menu",
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "method": "GET",
             "header": [
               {
