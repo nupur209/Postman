@@ -2107,7 +2107,7 @@
             }
           ],
           "request": {
-            "url": "http://192.168.129.143:5000/api/category",
+            "url": "http://192.168.129.143:5000/api/cat",
             "method": "GET",
             "header": [
               {
