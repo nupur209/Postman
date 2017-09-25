@@ -2765,7 +2765,7 @@
         },
         {
           "_postman_id": "cc3cd2ed-31b2-8d6a-40c8-ec11932930fe",
-          "name": "Register Product Offer with valid inputs copy",
+          "name": "Register Product Offer without Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "POST",
