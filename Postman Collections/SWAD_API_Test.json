@@ -2829,7 +2829,20 @@
       "_postman_id": "2ec27b6b-fe85-6861-4983-884e276108fd",
       "name": "17_Get product offer by product id",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "83cbd669-30c1-edb5-fa10-ad62f694a2fd",
+          "name": "getProductOfferByProductId",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "method": "GET",
+            "header": [],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
