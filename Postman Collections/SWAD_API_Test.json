@@ -2687,7 +2687,7 @@
           "_postman_id": "4873bc62-087c-4036-081d-cfbf54eb569c",
           "name": "Get Attraction by Valid ProductID  & Authorization",
           "request": {
-            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "GET",
             "header": [
               {
