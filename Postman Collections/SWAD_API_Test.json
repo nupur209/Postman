@@ -1819,7 +1819,11 @@
                   "pm.test(\"Content-Type is present\", function () {",
                   "    pm.response.to.have.header(\"Content-Type\");",
                   "});",
-                  ""
+                  "",
+                  "var data = JSON.parse(responseBody);",
+                  "var Product=data.product._id",
+                  "console.log(\"Product ID  is----\"+Product);",
+                  "postman.setGlobalVariable(\"Prod\", Product);"
                 ]
               }
             }
