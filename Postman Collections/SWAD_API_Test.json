@@ -2654,6 +2654,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "22ff0890-e119-76ee-e4c4-99207a8c70f9",
+      "name": "Get attraction by product Id",
+      "description": "",
+      "item": []
     }
   ]
 }
