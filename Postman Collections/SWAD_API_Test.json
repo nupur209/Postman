@@ -2859,7 +2859,29 @@
       "_postman_id": "ae0cc3f4-8a5c-3ca6-65b3-8f011225216c",
       "name": "Register comment rating",
       "description": "Register comment rating",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "71ea660f-f410-be64-c3e8-66d2504a9fcd",
+          "name": "RegisterCommentRating",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"string\",\r\n  \"user\": \"string\",\r\n  \"overall_rating\": \"string\",\r\n  \"ambience_rating\": \"string\",\r\n  \"service_rating\": \"string\",\r\n  \"occasion\": \"string\",\r\n  \"comment\": \"string\",\r\n  \"creation_date\": \"string\",\r\n  \"updated_date\": \"string\"\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
