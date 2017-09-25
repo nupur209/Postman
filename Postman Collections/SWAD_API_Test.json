@@ -2659,7 +2659,31 @@
       "_postman_id": "22ff0890-e119-76ee-e4c4-99207a8c70f9",
       "name": "14_Get attraction by product Id",
       "description": "",
-      "item": []
+      "item": [
+        {
+          "_postman_id": "4873bc62-087c-4036-081d-cfbf54eb569c",
+          "name": "Get Attraction by Valid ProductID  & Authorization",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/59afe50950ad2119c01be4e0/attraction",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {},
+            "description": ""
+          },
+          "response": []
+        }
+      ]
     }
   ]
 }
