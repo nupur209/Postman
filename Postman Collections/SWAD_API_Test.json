@@ -2778,7 +2778,8 @@
               {
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
-                "description": ""
+                "description": "",
+                "disabled": true
               }
             ],
             "body": {
