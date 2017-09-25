@@ -2757,7 +2757,33 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"string\",\r\n    \"updated_date\": \"string\"\r\n  }\r\n}"
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
+            },
+            "description": ""
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "cc3cd2ed-31b2-8d6a-40c8-ec11932930fe",
+          "name": "Register Product Offer with valid inputs copy",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
             },
             "description": ""
           },
