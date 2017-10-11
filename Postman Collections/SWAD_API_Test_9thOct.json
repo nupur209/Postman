@@ -2924,32 +2924,6 @@
       "description": "Register comment rating",
       "item": [
         {
-          "_postman_id": "860dccd4-9deb-7bf6-fa37-c5ca179b3c63",
-          "name": "UpdateCommentRating with Authorization",
-          "request": {
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-            "method": "GET",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
           "_postman_id": "ebdaec9c-de70-a8bc-6c64-dd49d244f123",
           "name": "UpdateCommentRating without  Authorization",
           "request": {
@@ -3080,6 +3054,32 @@
                 "value": "{{Token_Key}}",
                 "description": "",
                 "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "860dccd4-9deb-7bf6-fa37-c5ca179b3c63",
+          "name": "UpdateCommentRating with Authorization",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
