@@ -2913,7 +2913,7 @@
       "item": [
         {
           "_postman_id": "860dccd4-9deb-7bf6-fa37-c5ca179b3c63",
-          "name": "RegisterCommentRating with Authorization",
+          "name": "UpdateCommentRating with Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
@@ -2990,32 +2990,6 @@
           "response": []
         }
       ]
-    },
-    {
-      "_postman_id": "504ad68d-b95f-fd21-24cf-567558c5e543",
-      "name": "RegisterCommentRating without entering Mandatory field",
-      "request": {
-        "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-        "method": "PUT",
-        "header": [
-          {
-            "key": "Content-Type",
-            "value": "application/json",
-            "description": ""
-          },
-          {
-            "key": "Authorization",
-            "value": "{{Token_Key}}",
-            "description": ""
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
-        },
-        "description": ""
-      },
-      "response": []
     }
   ]
 }
