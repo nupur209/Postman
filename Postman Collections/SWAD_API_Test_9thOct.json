@@ -781,18 +781,17 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               },
               {
                 "key": "",
                 "value": "",
+                "description": "",
                 "disabled": true
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
+            "body": {},
             "description": "API is used for get user"
           },
           "response": []
