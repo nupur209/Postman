@@ -2946,7 +2946,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"product\": \"59ddfbeafbba1116883ed590\",\r\n  \"user\": \"{{UserID}}\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.7\",\r\n  \"occasion\": \"Holiday\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+              "raw": "{\r\n  \"product\": \"{{Prod}}\",\r\n  \"user\": \"{{UserID}}\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.7\",\r\n  \"occasion\": \"Holiday\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
             "description": null
           },
