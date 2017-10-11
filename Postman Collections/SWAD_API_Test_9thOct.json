@@ -3022,7 +3022,7 @@
       "name": "RegisterCommentRating without entering Mandatory field",
       "request": {
         "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-        "method": "POST",
+        "method": "PUT",
         "header": [
           {
             "key": "Content-Type",
