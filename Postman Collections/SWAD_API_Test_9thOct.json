@@ -2140,11 +2140,13 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "description": ""
+                "value": "{{Token_Key}}"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "description": null
           },
           "response": []
