@@ -3000,6 +3000,19 @@
         {
           "_postman_id": "d020a3f9-cec0-a580-c6e2-fc66f2212b15",
           "name": "UpdateCommentRating with Authorization copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "GET",
@@ -3007,7 +3020,8 @@
               {
                 "key": "Content-Type",
                 "value": "application/json",
-                "description": ""
+                "description": "",
+                "disabled": true
               },
               {
                 "key": "Authorization",
