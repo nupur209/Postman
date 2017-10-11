@@ -2841,7 +2841,7 @@
           "_postman_id": "83a53761-2ff6-4237-baf2-c0185b1f9cd7",
           "name": "RegisterCommentRating with Authorization",
           "request": {
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params/{{Prod}}",
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "PUT",
             "header": [
               {
