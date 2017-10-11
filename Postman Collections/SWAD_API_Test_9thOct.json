@@ -3066,8 +3066,7 @@
               {
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
-                "description": "",
-                "disabled": true
+                "description": ""
               }
             ],
             "body": {
