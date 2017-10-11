@@ -2951,32 +2951,6 @@
           "response": []
         },
         {
-          "_postman_id": "8c44181c-075a-ecd5-69db-0786ac451cb3",
-          "name": "UpdateCommentRating without manadotory fields",
-          "request": {
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"\",\r\n  \"comment\": \"\",\r\n  \"creation_date\": \"\",\r\n  \"updated_date\": \"\"\r\n}"
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
           "_postman_id": "c4b39510-0bff-d141-cbaa-97fe90bcc062",
           "name": "UpdateCommentRating without  Authorization copy",
           "request": {
@@ -2998,6 +2972,32 @@
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"{{Prod}}\",\r\n  \"user\": \"{{UserID}}\",\r\n  \"overall_rating\": \"5.5\",\r\n  \"ambience_rating\": \"4.7\",\r\n  \"service_rating\": \"4.1\",\r\n  \"occasion\": \"Holi\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8c44181c-075a-ecd5-69db-0786ac451cb3",
+          "name": "UpdateCommentRating without manadotory fields",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"\",\r\n  \"comment\": \"\",\r\n  \"creation_date\": \"\",\r\n  \"updated_date\": \"\"\r\n}"
             },
             "description": null
           },
