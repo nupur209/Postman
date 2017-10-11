@@ -62,6 +62,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "POST",
             "header": [
               {
@@ -73,7 +74,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -124,6 +124,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "POST",
             "header": [
               {
@@ -135,7 +136,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -184,6 +184,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "POST",
             "header": [
               {
@@ -195,7 +196,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstname\": \"\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -244,6 +244,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "POST",
             "header": [
               {
@@ -255,7 +256,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -308,6 +308,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "POST",
             "header": [
               {
@@ -319,7 +320,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -372,20 +372,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -405,7 +395,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -439,20 +441,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -472,7 +464,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -503,20 +507,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"\",\r\n  \"usertype\": \"user\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -536,7 +530,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -567,20 +573,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -600,7 +596,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -631,20 +639,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"Varun@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -664,7 +662,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"Varun@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -695,20 +705,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"2324345\",\r\n  \"usertype\": \"user\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -728,7 +728,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"2324345\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -762,6 +774,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user/{{UserID}}",
             "method": "GET",
             "header": [
               {
@@ -778,7 +791,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/user/{{UserID}}",
             "description": "API is used for get user"
           },
           "response": []
@@ -804,6 +816,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user/XER001@gmail.com",
             "method": "GET",
             "header": [
               {
@@ -820,7 +833,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/user/XER001@gmail.com",
             "description": "API is used for get user"
           },
           "response": []
@@ -844,6 +856,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.155:5000/api/user/{{UserID}}",
             "method": "GET",
             "header": [
               {
@@ -861,7 +874,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.155:5000/api/user/{{UserID}}",
             "description": "API is used for get user"
           },
           "response": []
@@ -887,13 +899,13 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "GET",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -916,13 +928,13 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/user",
             "method": "GET",
             "header": [],
             "body": {
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/user",
             "description": null
           },
           "response": []
@@ -972,6 +984,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -983,7 +996,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1030,6 +1042,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -1041,7 +1054,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1088,6 +1100,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -1099,7 +1112,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1146,6 +1158,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -1157,7 +1170,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1204,6 +1216,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -1215,7 +1228,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1262,6 +1274,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -1273,7 +1286,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Prod12\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1320,6 +1332,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product",
             "method": "POST",
             "header": [
               {
@@ -1331,7 +1344,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"\",\r\n  \"password\": \"\",\r\n  \"country\": \"India\",\r\n  \"name\": \"\",\r\n  \"email\": \"\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product",
             "description": null
           },
           "response": []
@@ -1370,20 +1382,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -1403,7 +1405,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -1436,20 +1450,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"12345612\",\r\n  \"usertype\": \"product-owner\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -1469,7 +1473,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"12345612\",\r\n  \"usertype\": \"product-owner\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -1503,20 +1519,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -1536,7 +1542,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -1571,20 +1589,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"\",\r\n  \"usertype\": \"product-owner\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -1604,7 +1612,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"\",\r\n  \"usertype\": \"product-owner\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -1638,20 +1658,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"nupurs009@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -1671,7 +1681,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"nupurs009@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -1705,20 +1727,10 @@
             }
           ],
           "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
-            },
             "url": {
               "raw": "http://192.168.129.143:5000/api/user/login?",
               "protocol": "http",
+              "auth": {},
               "host": [
                 "192",
                 "168",
@@ -1738,7 +1750,19 @@
                   "value": "user_ids",
                   "disabled": true
                 }
-              ]
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
             },
             "description": "This API is sue for login"
           },
@@ -1778,6 +1802,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
             "method": "GET",
             "header": [
               {
@@ -1789,7 +1814,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
             "description": null
           },
           "response": []
@@ -1816,6 +1840,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product",
             "method": "GET",
             "header": [
               {
@@ -1827,7 +1852,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api//product",
             "description": null
           },
           "response": []
@@ -1854,6 +1878,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product/varuns1333@gmail.com",
             "method": "GET",
             "header": [
               {
@@ -1865,7 +1890,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api//product/varuns1333@gmail.com",
             "description": null
           },
           "response": []
@@ -1890,6 +1914,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
             "method": "GET",
             "header": [
               {
@@ -1902,7 +1927,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
             "description": null
           },
           "response": []
@@ -1926,6 +1950,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product",
             "method": "GET",
             "header": [
               {
@@ -1938,7 +1963,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api//product",
             "description": null
           },
           "response": []
@@ -1991,6 +2015,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/category",
             "method": "POST",
             "header": [
               {
@@ -2002,7 +2027,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"category\": \"{{Cat}}\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/category",
             "description": null
           },
           "response": []
@@ -2028,6 +2052,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//category",
             "method": "POST",
             "header": [
               {
@@ -2039,7 +2064,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api//category",
             "description": null
           },
           "response": []
@@ -2068,6 +2092,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/category",
             "method": "GET",
             "header": [
               {
@@ -2080,7 +2105,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/category",
             "description": null
           },
           "response": []
@@ -2107,6 +2131,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/category",
             "method": "GET",
             "header": [
               {
@@ -2118,7 +2143,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/category",
             "description": null
           },
           "response": []
@@ -2152,6 +2176,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
             "method": "POST",
             "header": [
               {
@@ -2167,7 +2192,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 500\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
             "description": null
           },
           "response": []
@@ -2189,6 +2213,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "method": "POST",
             "header": [
               {
@@ -2205,7 +2230,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 500\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "description": null
           },
           "response": []
@@ -2238,6 +2262,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
             "method": "POST",
             "header": [
               {
@@ -2253,7 +2278,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": \"Hello\"\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
             "description": null
           },
           "response": []
@@ -2287,6 +2311,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "method": "GET",
             "header": [
               {
@@ -2302,7 +2327,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "description": null
           },
           "response": []
@@ -2324,6 +2348,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "method": "GET",
             "header": [
               {
@@ -2340,7 +2365,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "description": null
           },
           "response": []
@@ -2373,6 +2397,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "method": "PUT",
             "header": [
               {
@@ -2388,7 +2413,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 800\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikki\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
             "description": null
           },
           "response": []
@@ -2422,6 +2446,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "POST",
             "header": [
               {
@@ -2437,7 +2462,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2464,6 +2488,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "POST",
             "header": [
               {
@@ -2479,7 +2504,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"99/5/52017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2501,6 +2525,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "POST",
             "header": [
               {
@@ -2517,7 +2542,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2557,6 +2581,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "PUT",
             "header": [
               {
@@ -2572,7 +2597,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2601,6 +2625,7 @@
             }
           ],
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "PUT",
             "header": [
               {
@@ -2616,7 +2641,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"1209/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2632,6 +2656,7 @@
           "_postman_id": "ed1e50a0-1b79-ab08-6e32-7788b643a886",
           "name": "Get Attraction by Valid ProductID  & Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "GET",
             "header": [
               {
@@ -2647,7 +2672,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2656,6 +2680,7 @@
           "_postman_id": "27920965-12ef-2e9d-3147-601860548746",
           "name": "Get Attraction by Valid ProductID  wihout Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "method": "GET",
             "header": [
               {
@@ -2672,7 +2697,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
             "description": null
           },
           "response": []
@@ -2688,6 +2712,7 @@
           "_postman_id": "946850f6-8f1f-50ae-ad1d-ea0477e9d884",
           "name": "Register Product Offer with valid inputs",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "POST",
             "header": [
               {
@@ -2703,7 +2728,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "description": null
           },
           "response": []
@@ -2712,6 +2736,7 @@
           "_postman_id": "045ff2b4-0374-8de1-937e-760916225366",
           "name": "Register Product Offer without Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "POST",
             "header": [
               {
@@ -2728,7 +2753,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "description": null
           },
           "response": []
@@ -2744,6 +2768,7 @@
           "_postman_id": "bc8604e1-3c5e-5c7c-f608-6d92d94f7877",
           "name": "Update Product Offer",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "PUT",
             "header": [
               {
@@ -2759,7 +2784,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Winter Sale\"\r\n  }\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "description": null
           },
           "response": []
@@ -2775,6 +2799,7 @@
           "_postman_id": "73dd21fe-524e-e2e4-4ecc-6460326b02e6",
           "name": "getProductOfferByProductId",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "GET",
             "header": [
               {
@@ -2790,7 +2815,6 @@
               "mode": "raw",
               "raw": ""
             },
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "description": null
           },
           "response": []
@@ -2806,6 +2830,7 @@
           "_postman_id": "83a53761-2ff6-4237-baf2-c0185b1f9cd7",
           "name": "RegisterCommentRating with Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
             "header": [
               {
@@ -2821,7 +2846,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "description": null
           },
           "response": []
@@ -2830,15 +2854,18 @@
           "_postman_id": "269b8f73-8b15-6a62-67c3-9f9654d8b710",
           "name": "RegisterCommentRating without  Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
+                "description": "",
                 "disabled": true
               }
             ],
@@ -2846,7 +2873,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "description": null
           },
           "response": []
@@ -2855,22 +2881,24 @@
           "_postman_id": "802b965c-f0a2-11d3-5eb4-ed6d404bec72",
           "name": "RegisterCommentRating without entering Mandatory field",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "description": null
           },
           "response": []
@@ -2886,6 +2914,7 @@
           "_postman_id": "860dccd4-9deb-7bf6-fa37-c5ca179b3c63",
           "name": "RegisterCommentRating with Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
             "header": [
               {
@@ -2901,7 +2930,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "description": null
           },
           "response": []
@@ -2910,13 +2938,16 @@
           "_postman_id": "ebdaec9c-de70-a8bc-6c64-dd49d244f123",
           "name": "RegisterCommentRating without  Authorization",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
             "header": [
               {
+                "description": "",
                 "key": "Content-Type",
                 "value": "application/json"
               },
               {
+                "description": "",
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
                 "disabled": true
@@ -2926,7 +2957,6 @@
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "description": null
           },
           "response": []
@@ -2935,22 +2965,51 @@
           "_postman_id": "0ba74cf9-99d9-d643-db81-23e3bdec3894",
           "name": "RegisterCommentRating without entering Mandatory field",
           "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "8c44181c-075a-ecd5-69db-0786ac451cb3",
+          "name": "RegisterCommentRating without  Authorization copy",
+          "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "description": "",
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
             "description": null
           },
           "response": []
