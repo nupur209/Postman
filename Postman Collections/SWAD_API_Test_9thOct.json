@@ -3036,6 +3036,46 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "b32d194b-7d61-46f9-c267-4673c2669daa",
+          "name": "UpdateCommentRating with Authorization copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": "",
+                "disabled": true
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     }
