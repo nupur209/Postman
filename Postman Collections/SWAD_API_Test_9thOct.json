@@ -2927,7 +2927,7 @@
           "_postman_id": "ebdaec9c-de70-a8bc-6c64-dd49d244f123",
           "name": "UpdateCommentRating with  Authorization",
           "request": {
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "url": "http://192.168.129.143:5000/api/commentRating/params/",
             "method": "PUT",
             "header": [
               {
