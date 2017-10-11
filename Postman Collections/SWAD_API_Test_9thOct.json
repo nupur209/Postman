@@ -2938,6 +2938,32 @@
           "response": []
         },
         {
+          "_postman_id": "d020a3f9-cec0-a580-c6e2-fc66f2212b15",
+          "name": "UpdateCommentRating with Authorization copy",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        },
+        {
           "_postman_id": "ebdaec9c-de70-a8bc-6c64-dd49d244f123",
           "name": "UpdateCommentRating without  Authorization",
           "request": {
@@ -2985,32 +3011,6 @@
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"\",\r\n  \"comment\": \"\",\r\n  \"creation_date\": \"\",\r\n  \"updated_date\": \"\"\r\n}"
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "d020a3f9-cec0-a580-c6e2-fc66f2212b15",
-          "name": "UpdateCommentRating with Authorization copy",
-          "request": {
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              },
-              {
-                "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
             "description": null
           },
