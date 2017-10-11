@@ -2841,7 +2841,7 @@
           "_postman_id": "83a53761-2ff6-4237-baf2-c0185b1f9cd7",
           "name": "RegisterCommentRating with Authorization",
           "request": {
-            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "url": "http://192.168.129.143:5000/api/{{Prod}}/commentRating/params",
             "method": "POST",
             "header": [
               {
@@ -2857,7 +2857,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"product\": {{Prod}},\r\n  \"user\": \"59ddd887fbba1116883ed510\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+              "raw": "{\r\n  \"product\": \"{{Prod}}\"\",\r\n  \"user\": \"59ddd887fbba1116883ed510\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
             "description": null
           },
