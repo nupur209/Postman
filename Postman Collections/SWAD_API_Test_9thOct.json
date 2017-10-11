@@ -2916,15 +2916,17 @@
           "name": "UpdateCommentRating with Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-            "method": "POST",
+            "method": "PUT",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
@@ -2940,7 +2942,7 @@
           "name": "UpdateCommentRating without  Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-            "method": "POST",
+            "method": "PUT",
             "header": [
               {
                 "key": "Content-Type",
