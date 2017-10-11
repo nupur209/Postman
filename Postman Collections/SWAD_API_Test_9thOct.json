@@ -2964,7 +2964,7 @@
         },
         {
           "_postman_id": "8c44181c-075a-ecd5-69db-0786ac451cb3",
-          "name": "RegisterCommentRating without manadotory fields",
+          "name": "UpdateCommentRating without manadotory fields",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
