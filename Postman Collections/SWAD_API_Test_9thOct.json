@@ -3052,7 +3052,7 @@
         },
         {
           "_postman_id": "b32d194b-7d61-46f9-c267-4673c2669daa",
-          "name": "UpdateCommentRating without Authorization",
+          "name": "GetCommentRating without Authorization",
           "event": [
             {
               "listen": "test",
