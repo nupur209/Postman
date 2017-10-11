@@ -1,0 +1,2961 @@
+{
+  "variables": [],
+  "info": {
+    "name": "SWAD_API_Test_9thOct",
+    "_postman_id": "e5b8953e-8259-c0d9-b918-fa77b6e0fec8",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "dc93e438-af18-ff1a-d81c-f906cf10360a",
+      "name": "1_RegisterUser",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "d064e911-5d62-dbeb-89ac-5c297db73ea5",
+          "name": "RegisterUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  " ",
+                  "var data = JSON.parse(responseBody);",
+                  "var user_ids=data.user.userid",
+                  "console.log(\"User ID  is----\"+user_ids);",
+                  "postman.setGlobalVariable(\"UserID\", user_ids);",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "// Assertion to check the response value",
+                  " var jsonData = pm.response.json();",
+                  "pm.test(\"UserId Should be-----\"+jsonData.user.userid, function () {",
+                  "    pm.expect(jsonData.user.userid).to.eql(jsonData.user.userid);",
+                  "});",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "3f632960-15b7-84b9-019f-a6bf90bc527f",
+          "name": "RegisterUser_WithoutPassword",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Password--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: password: Path `password` is required.\");",
+                  "});",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "6e7aa5f9-ad63-0b62-41cb-3436ad8707c8",
+          "name": "RegisterUsername_WithoutFirstName",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without First name--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: firstname: Path `firstname` is required.\");",
+                  "});",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1f2daa48-5d29-87dc-f6ed-6fb92b616ff1",
+          "name": "RegisterUsername_WithoutEmail",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Email Id--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `email` is required.\");",
+                  "});"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"{{lastname}}\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "16451bc4-57c2-802a-4575-dbf71d1fc686",
+          "name": "RegisterUsername_WithoutLastName",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Last Name--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: lastname: Path `lastname` is required.\");",
+                  "});",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "8caa633c-2865-696f-44e1-12419bf1e75b",
+      "name": "2_Login",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "80091b81-2f70-e4f7-47ae-d799afc6277b",
+          "name": "Login with valid credential",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "var token_key=data.token",
+                  "postman.setGlobalVariable(\"Token_Key\", token_key);",
+                  "console.log(token_key);",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Firstname is Present\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"firstname\");",
+                  "});",
+                  "pm.test(\"Last name is Present\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"lastname\");",
+                  "});",
+                  "pm.test(\"User ID is Present\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"userid\");",
+                  "});",
+                  "",
+                  "  var jsonData = pm.response.json();",
+                  "pm.test(\"UserId Should be-----\"+jsonData.user.userid, function () {",
+                  "    pm.expect(jsonData.user.userid).to.eql(jsonData.user.userid);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5181cc80-10f7-03f4-f8ff-6e2e6c1f1415",
+          "name": "Login_WithoutUserId",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login  without UserID --\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"UserID cannot be empty.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "56b4e069-5b8b-5a8b-250d-b38139399c0f",
+          "name": "Login_WithoutPassword",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login  without Password --\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Password cannot be empty.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "310d3a0d-c37b-64b3-3814-42b2c3ed1681",
+          "name": "Login_WithoutUserType",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login  without UserType --\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"UserType cannot be empty.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "2ad46eee-03bd-31e0-8ff8-3e13a70b6e9f",
+          "name": "Login_WithInvalidUserId",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login with invalid UserID --\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"The Userid that you have entered doesnt match.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"Varun@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "1f831c9e-c60f-9555-b714-1abe376f92c6",
+          "name": "Login_WithInvalidPassword",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login with Invalid Password --\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"The password that you have entered is incorrect.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"2324345\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "185b88f9-f056-4a5f-f50d-5493752f8c23",
+      "name": "3_GetUser",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "497963d1-244e-8a1c-a43a-17548c531081",
+          "name": "GetUser_WithValidUserID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              },
+              {
+                "key": "",
+                "value": "",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/user/{{UserID}}",
+            "description": "API is used for get user"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "05aa4b57-d12b-a736-bd9f-f5b8ddfe668d",
+          "name": "GetUser_WithInvalidUserID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              },
+              {
+                "key": "",
+                "value": "",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/user/XER001@gmail.com",
+            "description": "API is used for get user"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "76badbf6-771b-9cae-aad3-821e951b359b",
+          "name": "GetUser_WithoutToken",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(500);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              },
+              {
+                "key": "",
+                "value": "",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.155:5000/api/user/{{UserID}}",
+            "description": "API is used for get user"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0e81e30f-eec1-6dca-a7b6-eb1b3625271b",
+          "name": "GetAllUsers",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7b2edf90-6f5b-8023-e448-3cecde4f8fd7",
+          "name": "GetAllUsers _WithoutToken",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/user",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "0c3d7554-9046-1747-f3d2-c2c5147086b0",
+      "name": "4_RegisterProduct",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "cd4e135e-33be-a1f6-6822-01e6db945edb",
+          "name": "RegisterProductUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "405d411a-6294-51e8-b74e-8a29af180ca2",
+          "name": "RegisterProductUser_WithoutFirstName",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without First name--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: firstname: Path `firstname` is required.\");",
+                  "});",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "24d8d37b-ceb8-9dff-1c42-1476b1201cc7",
+          "name": "RegisterProductUser_WithoutLastName",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Last name--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: lastname: Path `lastname` is required.\");",
+                  "});",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b1f46168-ea13-a1d4-c706-cbacd3ce99b1",
+          "name": "RegisterProductUser_WithoutEmailID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Email Id--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `email` is required.\");",
+                  "});"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Product_1\",\r\n  \"email\": \"\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "15ab1c36-b702-e60f-e084-a71874933b43",
+          "name": "RegisterProductUser_WithouttProductName",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Product Name--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `ProductName` is required.\");",
+                  "});"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"123456\",\r\n  \"country\": \"India\",\r\n  \"name\": \"\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ebd845a0-1904-2cd9-e533-ec6e08e1daeb",
+          "name": "RegisterProductUser_WithoutPassword",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Password-\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `Password` is required.\");",
+                  "});"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Varun\",\r\n  \"lastName\": \"Singh\",\r\n  \"password\": \"\",\r\n  \"country\": \"India\",\r\n  \"name\": \"Prod12\",\r\n  \"email\": \"varunsingh{{prdt}}@gmail.com\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "16a03985-e918-4af6-0a72-186218bddddb",
+          "name": "RegisterProductUser_WithoutMandatoryFields",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Mandatory Fields--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: firstname: Path `firstname` is required., lastname: Path `lastname` is required., password: Path `password` is required., email: Path `email` is required., userid: Path `userid` is required.\");",
+                  "});"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"\",\r\n  \"password\": \"\",\r\n  \"country\": \"India\",\r\n  \"name\": \"\",\r\n  \"email\": \"\",\r\n  \"area\": \"Noida\",\r\n  \"pin\": \"201301\",\r\n  \"sittingSpace\": \"500\",\r\n  \"sittingtype\": \"abc\",\r\n  \"category\": \"all\",\r\n  \"state\": \"UP\",\r\n  \"phone\": \"9643881430\",\r\n  \"offers\": [\r\n    {\r\n      \"offer\": \"asd\"\r\n    }\r\n  ],\r\n  \"starters\": [\r\n    {\r\n      \"starter\": \"xyz\",\r\n      \"starterRate\": 100\r\n    }\r\n  ],\r\n  \"maincourses\": [\r\n    {\r\n      \"mainCourse\": \"sdd\",\r\n      \"mainCourseRate\": 500\r\n    }\r\n  ],\r\n  \"desserts\": [\r\n    {\r\n      \"dessert\": \"vodka\",\r\n      \"dessertRate\": 100\r\n    }\r\n  ],\r\n  \"attraction\": [\r\n    {\r\n      \"attraction\": \"qweqw\",\r\n      \"attractionDate\": \"12092017\"\r\n    }\r\n  ]\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "791db65a-3c24-d974-0233-5c36880349bc",
+      "name": "5_LoginProductUser",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "3e08db64-d971-a2d1-9472-25cb263e01e9",
+          "name": "LoginFor_ProductUser",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "var token_key=data.token",
+                  "postman.setGlobalVariable(\"PToken_Key\", token_key);",
+                  "console.log(token_key);",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "b29c8f6a-3d45-4fad-7380-057f8826df2e",
+          "name": "LoginProductUser_WithInvalidPassword",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login User with invalid Password--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Authentication failed. Passwords did not match.\");",
+                  "});",
+                  "",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"12345612\",\r\n  \"usertype\": \"product-owner\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "cc80226a-8578-cc4d-b119-705121d2f756",
+          "name": "LoginProductUser_WithoutUserId",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login User without Password--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"UserID data cannot be empty.\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a312920b-a74e-91b0-4b3e-50ecd81f47ff",
+          "name": "LoginProductUser_WithoutPassword",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login User with without Password--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"password data cannot be empty.\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"\",\r\n  \"usertype\": \"product-owner\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "7c619ab3-9ca1-f0e5-8b9c-1510563e0511",
+          "name": "LoginProductUser_WithInvalidUserName",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login User with with invalid UserName--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Please enter correct UserName\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"nupurs009@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "456ac4f5-0b75-c4e1-7ff5-6708f1ca915d",
+          "name": "LoginProductUser_WithoutUserType",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login User without UserType--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Please enter UserType\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
+            },
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login?",
+              "protocol": "http",
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ]
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "3f4b97c9-3eb8-902c-ed53-6e7a16d6cdea",
+      "name": "6_GetProduct",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "67bfcbdd-bdc5-220b-7e80-fc93299a4bee",
+          "name": "GetProduct_WithValidUserID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "var data = JSON.parse(responseBody);",
+                  "var Product=data.product._id",
+                  "console.log(\"Product ID  is----\"+Product);",
+                  "postman.setGlobalVariable(\"Prod\", Product);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{PToken_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a8c187b5-c188-4a2e-e101-d9f733c802ec",
+          "name": "GetAllProducts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{PToken_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api//product",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "69ba2edc-30c6-491c-40b2-4ba734120fb2",
+          "name": "GetProduct_WithInvalidUserID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{PToken_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api//product/varuns1333@gmail.com",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "04070941-cdb8-5d44-1b8e-a152c5787134",
+          "name": "GetProduct_WithoutToken",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwiX2lkIjoiNTliNzgxMTY1NjM1MDQxZTU4NTZhNjFhIiwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZW1haWwiOiJpbml0IiwicGhvbmUiOiJpbml0IiwidXNlcnR5cGUiOiJpbml0IiwicGFzc3dvcmQiOiJpbml0IiwidXNlcmlkIjoiaW5pdCIsImxhc3RuYW1lIjoiaW5pdCIsImZpcnN0bmFtZSI6ImluaXQiLCJkYXRlb2ZiaXJ0aCI6ImluaXQiLCJtYXJpdGFsc3RhdHVzIjoiaW5pdCIsImFubml2ZXJzYXJ5IjoiaW5pdCIsImNoaWxkcmVuIjoiaW5pdCIsImFkZHJlc3Nlcy5vZmZpY2Uub2FyZWEiOiJpbml0IiwiYWRkcmVzc2VzLm9mZmljZS5vY2l0eSI6ImluaXQiLCJhZGRyZXNzZXMub2ZmaWNlLm9zdGF0ZSI6ImluaXQiLCJhZGRyZXNzZXMub2ZmaWNlLm9jb3VudHJ5IjoiaW5pdCIsImFkZHJlc3Nlcy5vZmZpY2Uub3BpbiI6ImluaXQiLCJhZGRyZXNzZXMuaG9tZS5oYXJlYSI6ImluaXQiLCJhZGRyZXNzZXMuaG9tZS5oY2l0eSI6ImluaXQiLCJhZGRyZXNzZXMuaG9tZS5oc3RhdGUiOiJpbml0IiwiYWRkcmVzc2VzLmhvbWUuaGNvdW50cnkiOiJpbml0IiwiYWRkcmVzc2VzLmhvbWUuaHBpbiI6ImluaXQiLCJwcmVmZXJlbmNlcy5jdWlzaW5lcyI6ImluaXQiLCJwcmVmZXJlbmNlcy5hcmVhcyI6ImluaXQiLCJwcmVmZXJlbmNlcy5hbWJpZW5jZXMiOiJpbml0IiwiY3JlYXRpb25fZGF0ZSI6ImluaXQiLCJ1cGRhdGVkX2RhdGUiOiJpbml0IiwiaW1hZ2VVUkwiOiJpbml0IiwiX192IjoiaW5pdCIsIl9pZCI6ImluaXQifSwic3RhdGVzIjp7Imlnbm9yZSI6e30sImRlZmF1bHQiOnt9LCJpbml0Ijp7Il9fdiI6dHJ1ZSwidXNlcnR5cGUiOnRydWUsImRhdGVvZmJpcnRoIjp0cnVlLCJtYXJpdGFsc3RhdHVzIjp0cnVlLCJhbm5pdmVyc2FyeSI6dHJ1ZSwiY2hpbGRyZW4iOnRydWUsImFkZHJlc3Nlcy5vZmZpY2Uub2FyZWEiOnRydWUsImFkZHJlc3Nlcy5vZmZpY2Uub2NpdHkiOnRydWUsImFkZHJlc3Nlcy5vZmZpY2Uub3N0YXRlIjp0cnVlLCJhZGRyZXNzZXMub2ZmaWNlLm9jb3VudHJ5Ijp0cnVlLCJhZGRyZXNzZXMub2ZmaWNlLm9waW4iOnRydWUsImFkZHJlc3Nlcy5ob21lLmhhcmVhIjp0cnVlLCJhZGRyZXNzZXMuaG9tZS5oY2l0eSI6dHJ1ZSwiYWRkcmVzc2VzLmhvbWUuaHN0YXRlIjp0cnVlLCJhZGRyZXNzZXMuaG9tZS5oY291bnRyeSI6dHJ1ZSwiYWRkcmVzc2VzLmhvbWUuaHBpbiI6dHJ1ZSwicHJlZmVyZW5jZXMuY3Vpc2luZXMiOnRydWUsInByZWZlcmVuY2VzLmFyZWFzIjp0cnVlLCJwcmVmZXJlbmNlcy5hbWJpZW5jZXMiOnRydWUsImNyZWF0aW9uX2RhdGUiOnRydWUsInVwZGF0ZWRfZGF0ZSI6dHJ1ZSwiaW1hZ2VVUkwiOnRydWUsImZpcnN0bmFtZSI6dHJ1ZSwibGFzdG5hbWUiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGhvbmUiOnRydWUsInVzZXJpZCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwicGF0aHNUb1Njb3BlcyI6e30sImVtaXR0ZXIiOnsiZG9tYWluIjpudWxsLCJfZXZlbnRzIjp7InNhdmUiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sImlzTmV3IjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGxdfSwiX2V2ZW50c0NvdW50IjoyLCJfbWF4TGlzdGVuZXJzIjowfX0sImlzTmV3IjpmYWxzZSwiX2RvYyI6eyJ1c2VydHlwZSI6InByb2R1Y3Qtb3duZXIiLCJkYXRlb2ZiaXJ0aCI6bnVsbCwibWFyaXRhbHN0YXR1cyI6bnVsbCwiYW5uaXZlcnNhcnkiOm51bGwsImNoaWxkcmVuIjpudWxsLCJhZGRyZXNzZXMiOnsib2ZmaWNlIjp7Im9hcmVhIjpudWxsLCJvY2l0eSI6bnVsbCwib3N0YXRlIjpudWxsLCJvY291bnRyeSI6bnVsbCwib3BpbiI6bnVsbH0sImhvbWUiOnsiaGFyZWEiOm51bGwsImhjaXR5IjpudWxsLCJoc3RhdGUiOm51bGwsImhjb3VudHJ5IjpudWxsLCJocGluIjpudWxsfX0sInByZWZlcmVuY2VzIjp7ImN1aXNpbmVzIjpbXSwiYXJlYXMiOltdLCJhbWJpZW5jZXMiOltdfSwiY3JlYXRpb25fZGF0ZSI6IjIwMTctMDktMTJUMDY6Mzk6MTguMzMzWiIsInVwZGF0ZWRfZGF0ZSI6bnVsbCwiaW1hZ2VVUkwiOm51bGwsIl9fdiI6MCwiZmlyc3RuYW1lIjoiVmFydW4iLCJsYXN0bmFtZSI6IlNpbmdoIiwicGFzc3dvcmQiOiIkMmEkMTAkWEt5Yk5DZWE4WHF6RGh0akNSSGNTZWRUMGY3dDVyb3I2MWdWY2tUU3NVZ1I5c2hINW9oWG0iLCJlbWFpbCI6InZhcnVuc2luZ2htY2FAZ21haWwuY29tIiwicGhvbmUiOiI5NjQzODgxNDMwIiwidXNlcmlkIjoidmFydW5zaW5naG1jYUBnbWFpbC5jb20iLCJfaWQiOiI1OWI3ODExNjU2MzUwNDFlNTg1NmE2MWEifSwiJGluaXQiOnRydWUsImlhdCI6MTUwNTE5ODcyNCwiZXhwIjoxNTA1Mjg4NzI0fQ.Q5c-XAemprh33UVRAvq8KU6QxEw-JmfXEHpA62jwN50",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "a1b6183e-e266-8960-6af3-87843a0ab3ca",
+          "name": "GetAllProducts _WithoutToken",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyIkX18iOnsic3RyaWN0TW9kZSI6dHJ1ZSwic2VsZWN0ZWQiOnt9LCJnZXR0ZXJzIjp7fSwiX2lkIjoiNTliNzgxMTY1NjM1MDQxZTU4NTZhNjFhIiwid2FzUG9wdWxhdGVkIjpmYWxzZSwiYWN0aXZlUGF0aHMiOnsicGF0aHMiOnsiZW1haWwiOiJpbml0IiwicGhvbmUiOiJpbml0IiwidXNlcnR5cGUiOiJpbml0IiwicGFzc3dvcmQiOiJpbml0IiwidXNlcmlkIjoiaW5pdCIsImxhc3RuYW1lIjoiaW5pdCIsImZpcnN0bmFtZSI6ImluaXQiLCJkYXRlb2ZiaXJ0aCI6ImluaXQiLCJtYXJpdGFsc3RhdHVzIjoiaW5pdCIsImFubml2ZXJzYXJ5IjoiaW5pdCIsImNoaWxkcmVuIjoiaW5pdCIsImFkZHJlc3Nlcy5vZmZpY2Uub2FyZWEiOiJpbml0IiwiYWRkcmVzc2VzLm9mZmljZS5vY2l0eSI6ImluaXQiLCJhZGRyZXNzZXMub2ZmaWNlLm9zdGF0ZSI6ImluaXQiLCJhZGRyZXNzZXMub2ZmaWNlLm9jb3VudHJ5IjoiaW5pdCIsImFkZHJlc3Nlcy5vZmZpY2Uub3BpbiI6ImluaXQiLCJhZGRyZXNzZXMuaG9tZS5oYXJlYSI6ImluaXQiLCJhZGRyZXNzZXMuaG9tZS5oY2l0eSI6ImluaXQiLCJhZGRyZXNzZXMuaG9tZS5oc3RhdGUiOiJpbml0IiwiYWRkcmVzc2VzLmhvbWUuaGNvdW50cnkiOiJpbml0IiwiYWRkcmVzc2VzLmhvbWUuaHBpbiI6ImluaXQiLCJwcmVmZXJlbmNlcy5jdWlzaW5lcyI6ImluaXQiLCJwcmVmZXJlbmNlcy5hcmVhcyI6ImluaXQiLCJwcmVmZXJlbmNlcy5hbWJpZW5jZXMiOiJpbml0IiwiY3JlYXRpb25fZGF0ZSI6ImluaXQiLCJ1cGRhdGVkX2RhdGUiOiJpbml0IiwiaW1hZ2VVUkwiOiJpbml0IiwiX192IjoiaW5pdCIsIl9pZCI6ImluaXQifSwic3RhdGVzIjp7Imlnbm9yZSI6e30sImRlZmF1bHQiOnt9LCJpbml0Ijp7Il9fdiI6dHJ1ZSwidXNlcnR5cGUiOnRydWUsImRhdGVvZmJpcnRoIjp0cnVlLCJtYXJpdGFsc3RhdHVzIjp0cnVlLCJhbm5pdmVyc2FyeSI6dHJ1ZSwiY2hpbGRyZW4iOnRydWUsImFkZHJlc3Nlcy5vZmZpY2Uub2FyZWEiOnRydWUsImFkZHJlc3Nlcy5vZmZpY2Uub2NpdHkiOnRydWUsImFkZHJlc3Nlcy5vZmZpY2Uub3N0YXRlIjp0cnVlLCJhZGRyZXNzZXMub2ZmaWNlLm9jb3VudHJ5Ijp0cnVlLCJhZGRyZXNzZXMub2ZmaWNlLm9waW4iOnRydWUsImFkZHJlc3Nlcy5ob21lLmhhcmVhIjp0cnVlLCJhZGRyZXNzZXMuaG9tZS5oY2l0eSI6dHJ1ZSwiYWRkcmVzc2VzLmhvbWUuaHN0YXRlIjp0cnVlLCJhZGRyZXNzZXMuaG9tZS5oY291bnRyeSI6dHJ1ZSwiYWRkcmVzc2VzLmhvbWUuaHBpbiI6dHJ1ZSwicHJlZmVyZW5jZXMuY3Vpc2luZXMiOnRydWUsInByZWZlcmVuY2VzLmFyZWFzIjp0cnVlLCJwcmVmZXJlbmNlcy5hbWJpZW5jZXMiOnRydWUsImNyZWF0aW9uX2RhdGUiOnRydWUsInVwZGF0ZWRfZGF0ZSI6dHJ1ZSwiaW1hZ2VVUkwiOnRydWUsImZpcnN0bmFtZSI6dHJ1ZSwibGFzdG5hbWUiOnRydWUsInBhc3N3b3JkIjp0cnVlLCJlbWFpbCI6dHJ1ZSwicGhvbmUiOnRydWUsInVzZXJpZCI6dHJ1ZSwiX2lkIjp0cnVlfSwibW9kaWZ5Ijp7fSwicmVxdWlyZSI6e319LCJzdGF0ZU5hbWVzIjpbInJlcXVpcmUiLCJtb2RpZnkiLCJpbml0IiwiZGVmYXVsdCIsImlnbm9yZSJdfSwicGF0aHNUb1Njb3BlcyI6e30sImVtaXR0ZXIiOnsiZG9tYWluIjpudWxsLCJfZXZlbnRzIjp7InNhdmUiOltudWxsLG51bGwsbnVsbCxudWxsLG51bGwsbnVsbF0sImlzTmV3IjpbbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLG51bGxdfSwiX2V2ZW50c0NvdW50IjoyLCJfbWF4TGlzdGVuZXJzIjowfX0sImlzTmV3IjpmYWxzZSwiX2RvYyI6eyJ1c2VydHlwZSI6InByb2R1Y3Qtb3duZXIiLCJkYXRlb2ZiaXJ0aCI6bnVsbCwibWFyaXRhbHN0YXR1cyI6bnVsbCwiYW5uaXZlcnNhcnkiOm51bGwsImNoaWxkcmVuIjpudWxsLCJhZGRyZXNzZXMiOnsib2ZmaWNlIjp7Im9hcmVhIjpudWxsLCJvY2l0eSI6bnVsbCwib3N0YXRlIjpudWxsLCJvY291bnRyeSI6bnVsbCwib3BpbiI6bnVsbH0sImhvbWUiOnsiaGFyZWEiOm51bGwsImhjaXR5IjpudWxsLCJoc3RhdGUiOm51bGwsImhjb3VudHJ5IjpudWxsLCJocGluIjpudWxsfX0sInByZWZlcmVuY2VzIjp7ImN1aXNpbmVzIjpbXSwiYXJlYXMiOltdLCJhbWJpZW5jZXMiOltdfSwiY3JlYXRpb25fZGF0ZSI6IjIwMTctMDktMTJUMDY6Mzk6MTguMzMzWiIsInVwZGF0ZWRfZGF0ZSI6bnVsbCwiaW1hZ2VVUkwiOm51bGwsIl9fdiI6MCwiZmlyc3RuYW1lIjoiVmFydW4iLCJsYXN0bmFtZSI6IlNpbmdoIiwicGFzc3dvcmQiOiIkMmEkMTAkWEt5Yk5DZWE4WHF6RGh0akNSSGNTZWRUMGY3dDVyb3I2MWdWY2tUU3NVZ1I5c2hINW9oWG0iLCJlbWFpbCI6InZhcnVuc2luZ2htY2FAZ21haWwuY29tIiwicGhvbmUiOiI5NjQzODgxNDMwIiwidXNlcmlkIjoidmFydW5zaW5naG1jYUBnbWFpbC5jb20iLCJfaWQiOiI1OWI3ODExNjU2MzUwNDFlNTg1NmE2MWEifSwiJGluaXQiOnRydWUsImlhdCI6MTUwNTE5ODcyNCwiZXhwIjoxNTA1Mjg4NzI0fQ.Q5c-XAemprh33UVRAvq8KU6QxEw-JmfXEHpA62jwN50",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api//product",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "2d06776d-f7d6-a962-9aae-86ccfad1e673",
+      "name": "7_Register Category",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "0aa2b699-3f00-5ee2-2d89-aeb96ad32e32",
+          "name": "Register Category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "var data = JSON.parse(responseBody);",
+                  "var cat=data.category.category",
+                  "console.log(\"Category  is----\"+cat);",
+                  "postman.setGlobalVariable(\"category\", cat);"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
+                  "console.log(text);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"{{Cat}}\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/category",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "00db1825-687d-7173-cc17-6985fc58a537",
+          "name": "Register Category with duplicate category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api//category",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "6400ffe3-dfec-9087-0d4f-0d13a10fecb9",
+      "name": "8_GetCategory",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "582ee69d-f2d3-6c6a-1f2e-48681699caea",
+          "name": "GetCategory without Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/category",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0209f2ae-2dbe-9cfc-8762-9cb95247aa26",
+          "name": "GetCategory with valid Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/category",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "67e1552b-b76c-5211-ba21-cdfb43753073",
+      "name": "9_RegisterMenu",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "83e7601c-4024-9f85-3a3e-0ad009250674",
+          "name": "RegisterMenu with Valid Input",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 500\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ac86773a-e03b-1f6b-54f0-d45390ce5fe0",
+          "name": "RegisterMenu without Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 500\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0de7b252-4a9f-f51f-42ab-fa7e091fd78d",
+          "name": "RegisterMenu with Invalid Currency",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Menu validation failed--\"+jsonData._message, function () {",
+                  "    pm.expect(jsonData._message).to.eql(\"Menu validation failed\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": \"Hello\"\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "3202513c-b69f-8647-64e1-271d0fed61b4",
+      "name": "10_GetMenuByProductID",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "f91c57ab-ee3e-b19b-548b-76f1fb325bf1",
+          "name": "GetMenuByProductID with Valid Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "604ed88e-4b99-66be-945f-03a08e65f38b",
+          "name": "GetMenuByProductID without Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "3e0622d6-584c-134c-73b0-6a357f4e2193",
+      "name": "11_UpdateMenu",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "b7893dc6-d304-4b0e-31ce-324810faeb67",
+          "name": "UpdateMenu with valid parameter",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 800\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikki\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "8391392b-5f2e-cb4a-db2f-91faade416b6",
+      "name": "12_RegisterAttraction",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "fc0c4364-c7f9-1073-18c2-900424c6d4aa",
+          "name": "Register Attraction with Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "5c352d78-d9e3-6eb5-e60b-337b2aae19c8",
+          "name": "Register Attraction with invalid inputs",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"99/5/52017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "cee2496e-8ef6-9a68-2d9e-573ae9e49a92",
+          "name": "Register Attraction without Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "58cf1e81-1f6c-04d8-47df-5eb59fa04d0a",
+      "name": "13_Update Attraction",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "2fb81237-5ebe-5df6-eeeb-5c7288768ddf",
+          "name": "Update with Valid input",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Attraction updated successfully.--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Attraction updated successfully.\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "933c4464-f5ff-f004-b4d0-c1a78fa9a79f",
+          "name": "Update with Invalid input ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"1209/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "62745443-0122-d2e4-9645-3e91351b8515",
+      "name": "14_Get attraction by product Id",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "ed1e50a0-1b79-ab08-6e32-7788b643a886",
+          "name": "Get Attraction by Valid ProductID  & Authorization",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "27920965-12ef-2e9d-3147-601860548746",
+          "name": "Get Attraction by Valid ProductID  wihout Authorization",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "bc40ab83-bf36-b51f-fd1b-8454527ce5ed",
+      "name": "15_Register Product Offer",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "946850f6-8f1f-50ae-ad1d-ea0477e9d884",
+          "name": "Register Product Offer with valid inputs",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "045ff2b4-0374-8de1-937e-760916225366",
+          "name": "Register Product Offer without Authorization",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "6f9f8fca-a75e-ae59-f549-c07d44ba7d83",
+      "name": "16_Update Product Offer",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "bc8604e1-3c5e-5c7c-f608-6d92d94f7877",
+          "name": "Update Product Offer",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Winter Sale\"\r\n  }\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "339db0b8-98d5-2c84-9b6d-f938c50cef96",
+      "name": "17_Get product offer by product id",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "73dd21fe-524e-e2e4-4ecc-6460326b02e6",
+          "name": "getProductOfferByProductId",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "cfa1e345-3187-bd5b-ac51-4159835adc0b",
+      "name": "18_Register comment rating",
+      "description": "Register comment rating",
+      "item": [
+        {
+          "_postman_id": "83a53761-2ff6-4237-baf2-c0185b1f9cd7",
+          "name": "RegisterCommentRating with Authorization",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "269b8f73-8b15-6a62-67c3-9f9654d8b710",
+          "name": "RegisterCommentRating without  Authorization",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "802b965c-f0a2-11d3-5eb4-ed6d404bec72",
+          "name": "RegisterCommentRating without entering Mandatory field",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "_postman_id": "6fb685f8-cd30-03c1-0e4c-38bb71b19cd3",
+      "name": "19_Update comment rating",
+      "description": "Register comment rating",
+      "item": [
+        {
+          "_postman_id": "860dccd4-9deb-7bf6-fa37-c5ca179b3c63",
+          "name": "RegisterCommentRating with Authorization",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "ebdaec9c-de70-a8bc-6c64-dd49d244f123",
+          "name": "RegisterCommentRating without  Authorization",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"Barbie Doll\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "0ba74cf9-99d9-d643-db81-23e3bdec3894",
+          "name": "RegisterCommentRating without entering Mandatory field",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"Nupur\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/commentRating/params",
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
