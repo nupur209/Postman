@@ -2944,7 +2944,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"product\": \"{{Prod}}\",\r\n  \"user\": \"{{UserID}}\",\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
+              "raw": "{\r\n  \"overall_rating\": \"5\",\r\n  \"ambience_rating\": \"4.8\",\r\n  \"service_rating\": \"4.9\",\r\n  \"occasion\": \"Holidays\",\r\n  \"comment\": \"Hello\",\r\n  \"creation_date\": \"20170707\",\r\n  \"updated_date\": \"20170101\"\r\n}"
             },
             "description": null
           },
