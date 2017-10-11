@@ -3012,7 +3012,7 @@
       "item": [
         {
           "_postman_id": "d020a3f9-cec0-a580-c6e2-fc66f2212b15",
-          "name": "UpdateCommentRating with Authorization",
+          "name": "GetCommentRating with Authorization",
           "event": [
             {
               "listen": "test",
