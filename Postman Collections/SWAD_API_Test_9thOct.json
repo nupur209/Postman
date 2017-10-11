@@ -2916,15 +2916,17 @@
           "name": "UpdateCommentRating with Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
-            "method": "POST",
+            "method": "PUT",
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
@@ -2989,6 +2991,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "59d183a8-fe53-095d-2740-a493f6476b0e",
+      "name": "20_Get comment rating by product id or user id ",
+      "description": "",
+      "item": []
     }
   ]
 }
