@@ -1812,13 +1812,11 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{PToken_Key}}"
+                "value": "{{PToken_Key}}",
+                "description": ""
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
+            "body": {},
             "description": null
           },
           "response": []
