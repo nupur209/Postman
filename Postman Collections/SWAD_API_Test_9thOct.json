@@ -2102,13 +2102,11 @@
               {
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
+                "description": "",
                 "disabled": true
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
+            "body": {},
             "description": null
           },
           "response": []
