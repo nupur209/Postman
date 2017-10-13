@@ -2838,6 +2838,23 @@
         {
           "_postman_id": "83a53761-2ff6-4237-baf2-c0185b1f9cd7",
           "name": "RegisterCommentRating with Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
@@ -2864,6 +2881,24 @@
         {
           "_postman_id": "269b8f73-8b15-6a62-67c3-9f9654d8b710",
           "name": "RegisterCommentRating without  Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
@@ -2891,6 +2926,24 @@
         {
           "_postman_id": "802b965c-f0a2-11d3-5eb4-ed6d404bec72",
           "name": "RegisterCommentRating without entering Mandatory field",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
@@ -2924,6 +2977,26 @@
         {
           "_postman_id": "ebdaec9c-de70-a8bc-6c64-dd49d244f123",
           "name": "UpdateCommentRating with  Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params/",
             "method": "PUT",
@@ -2951,6 +3024,24 @@
         {
           "_postman_id": "c4b39510-0bff-d141-cbaa-97fe90bcc062",
           "name": "UpdateCommentRating without  Authorization copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "PUT",
@@ -2978,6 +3069,24 @@
         {
           "_postman_id": "8c44181c-075a-ecd5-69db-0786ac451cb3",
           "name": "UpdateCommentRating without manadotory fields",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "PUT",
@@ -3020,10 +3129,7 @@
                   "pm.test(\"Response time is less than 200ms\", function () {",
                   "    pm.expect(pm.response.responseTime).to.be.below(200);",
                   "});",
-                  "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});"
+                  ""
                 ]
               }
             }
@@ -3035,7 +3141,8 @@
               {
                 "key": "Content-Type",
                 "value": "application/json",
-                "description": ""
+                "description": "",
+                "disabled": true
               },
               {
                 "key": "Authorization",
