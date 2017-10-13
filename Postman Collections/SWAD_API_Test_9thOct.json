@@ -2838,23 +2838,6 @@
         {
           "_postman_id": "83a53761-2ff6-4237-baf2-c0185b1f9cd7",
           "name": "RegisterCommentRating with Authorization",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});",
-                  "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});"
-                ]
-              }
-            }
-          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/commentRating/params",
             "method": "POST",
