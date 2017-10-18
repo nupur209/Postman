@@ -2097,7 +2097,7 @@
         },
         {
           "_postman_id": "e3ed0688-55b9-1617-a1d5-44ab1b2de300",
-          "name": "Register Category copy",
+          "name": "Register Category without category description",
           "event": [
             {
               "listen": "test",
