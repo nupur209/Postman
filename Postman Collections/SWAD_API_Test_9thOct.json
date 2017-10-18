@@ -3032,6 +3032,30 @@
         {
           "_postman_id": "946850f6-8f1f-50ae-ad1d-ea0477e9d884",
           "name": "Register Product Offer with valid inputs",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Menu validation failed--\"+jsonData._message, function () {",
+                  "    pm.expect(jsonData._message).to.eql(\"Menu validation failed\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "POST",
