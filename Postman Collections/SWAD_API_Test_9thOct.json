@@ -3201,7 +3201,7 @@
       "item": [
         {
           "_postman_id": "bc8604e1-3c5e-5c7c-f608-6d92d94f7877",
-          "name": "Update Product Offer",
+          "name": "Update Product Offer with Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "PUT",
