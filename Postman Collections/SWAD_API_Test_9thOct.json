@@ -3075,7 +3075,7 @@
         },
         {
           "_postman_id": "398ea3a7-1c99-1f7c-1d84-2da56b392600",
-          "name": "Register Product Offer with valid inputs copy",
+          "name": "Register Product Offer with invalid inputs",
           "event": [
             {
               "listen": "test",
