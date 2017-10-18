@@ -2871,7 +2871,7 @@
         },
         {
           "_postman_id": "a6dabde2-afa4-e1c2-85bf-f8dc196916b6",
-          "name": "Update with Valid input copy",
+          "name": "Update with Valid input & without authorization",
           "event": [
             {
               "listen": "test",
