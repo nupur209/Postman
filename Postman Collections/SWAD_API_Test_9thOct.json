@@ -2870,6 +2870,50 @@
           "response": []
         },
         {
+          "_postman_id": "933c4464-f5ff-f004-b4d0-c1a78fa9a79f",
+          "name": "Update with Invalid input ",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"1209/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        },
+        {
           "_postman_id": "a6dabde2-afa4-e1c2-85bf-f8dc196916b6",
           "name": "Update with Valid input copy",
           "event": [
@@ -2914,50 +2958,6 @@
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"12092017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "933c4464-f5ff-f004-b4d0-c1a78fa9a79f",
-          "name": "Update with Invalid input ",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "",
-                  "var jsonData = pm.response.json();",
-                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
-                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
-                  "});",
-                  "",
-                  "",
-                  "pm.test(\"Response time is less than 200ms\", function () {",
-                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
-            "method": "PUT",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Authorization",
-                "value": "{{Token_Key}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"1209/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special Hurray\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
             },
             "description": null
           },
