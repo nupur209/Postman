@@ -2038,7 +2038,7 @@
         },
         {
           "_postman_id": "2f67b803-a8de-8981-9d16-0e1aada3b7f5",
-          "name": "Register Category without Category name",
+          "name": "Register Category without Category",
           "event": [
             {
               "listen": "test",
