@@ -2417,12 +2417,6 @@
                   "});",
                   "",
                   "",
-                  "var jsonData = pm.response.json();",
-                  "pm.test(\"Menu validation failed--\"+jsonData._message, function () {",
-                  "    pm.expect(jsonData._message).to.eql(\"Menu validation failed\");",
-                  "});",
-                  "",
-                  "",
                   "pm.test(\"Response time is less than 200ms\", function () {",
                   "    pm.expect(pm.response.responseTime).to.be.below(200);",
                   "});"
