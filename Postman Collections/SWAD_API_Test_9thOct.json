@@ -2075,6 +2075,108 @@
       ]
     },
     {
+      "_postman_id": "e5c7d1eb-0522-b37f-51e2-056ea1988e4a",
+      "name": "7_Register Category copy",
+      "description": null,
+      "item": [
+        {
+          "_postman_id": "e9f1940b-9747-be25-e764-871336c5e16d",
+          "name": "Register Category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "var data = JSON.parse(responseBody);",
+                  "var cat=data.category.category",
+                  "console.log(\"Category  is----\"+cat);",
+                  "postman.setGlobalVariable(\"category\", cat);"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
+                  "console.log(text);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/category",
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"{{Cat}}\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "02151254-4a45-67bb-7c41-d0bfa29d8b78",
+          "name": "Register Category with duplicate category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api//category",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "_postman_id": "6400ffe3-dfec-9087-0d4f-0d13a10fecb9",
       "name": "8_GetCategory",
       "description": null,
