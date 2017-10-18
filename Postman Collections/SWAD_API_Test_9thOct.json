@@ -3752,8 +3752,7 @@
               {
                 "key": "Content-Type",
                 "value": "application/json",
-                "description": "",
-                "disabled": true
+                "description": ""
               },
               {
                 "key": "Authorization",
