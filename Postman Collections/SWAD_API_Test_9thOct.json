@@ -2585,7 +2585,7 @@
         },
         {
           "_postman_id": "5cf90247-cce4-6543-cba8-054c425eeb6f",
-          "name": "UpdateMenu with valid parameter copy",
+          "name": "UpdateMenu with invalid parameter",
           "event": [
             {
               "listen": "test",
