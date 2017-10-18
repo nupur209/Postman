@@ -2741,6 +2741,11 @@
                   "",
                   "pm.test(\"Status code is 200\", function () {",
                   "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Attraction validation failed --\"+jsonData._message, function () {",
+                  "    pm.expect(jsonData._message).to.eql(\"Attraction validation failed\");",
                   "});"
                 ]
               }
@@ -2752,11 +2757,13 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
