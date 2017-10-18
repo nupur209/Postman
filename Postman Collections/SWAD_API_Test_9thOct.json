@@ -3347,7 +3347,7 @@
       "item": [
         {
           "_postman_id": "73dd21fe-524e-e2e4-4ecc-6460326b02e6",
-          "name": "getProductOfferByProductId",
+          "name": "getProductOfferByProductId with authorization",
           "event": [
             {
               "listen": "test",
