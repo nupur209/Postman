@@ -3111,7 +3111,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
             },
             "description": null
           },
