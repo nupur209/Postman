@@ -2402,6 +2402,54 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "678d2c00-cbe7-1dd3-2825-15ab4bd76602",
+          "name": "RegisterMenu with Invalid Currency copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Menu validation failed--\"+jsonData._message, function () {",
+                  "    pm.expect(jsonData._message).to.eql(\"Menu validation failed\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api//product/{{Prod}}/menu",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": \"Hello\"\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
