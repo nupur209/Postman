@@ -2585,7 +2585,7 @@
         },
         {
           "_postman_id": "521d24c7-ea5e-2d4f-eedf-d760e90f4901",
-          "name": "UpdateMenu with valid parameter copy",
+          "name": "UpdateMenu without  authorization",
           "event": [
             {
               "listen": "test",
