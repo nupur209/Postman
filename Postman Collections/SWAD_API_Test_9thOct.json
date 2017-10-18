@@ -2933,7 +2933,13 @@
                   "",
                   "pm.test(\"Response time is less than 200ms\", function () {",
                   "    pm.expect(pm.response.responseTime).to.be.below(200);",
-                  "});"
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
+                  "});",
+                  ""
                 ]
               }
             }
