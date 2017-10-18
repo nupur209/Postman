@@ -2626,6 +2626,49 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "5cf90247-cce4-6543-cba8-054c425eeb6f",
+          "name": "UpdateMenu with valid parameter copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/menu",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": 800\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikki\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
