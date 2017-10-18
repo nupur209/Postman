@@ -2113,10 +2113,11 @@
                   "    pm.response.to.have.status(200);",
                   "});",
                   "",
-                  "var data = JSON.parse(responseBody);",
-                  "var cat=data.category.category",
-                  "console.log(\"Category  is----\"+cat);",
-                  "postman.setGlobalVariable(\"category\", cat);"
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Category--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"ProductCategory validation failed: categorydescription: Path `categorydescription` is required.\");",
+                  "});",
+                  ""
                 ]
               }
             },
