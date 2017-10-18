@@ -3227,7 +3227,7 @@
         },
         {
           "_postman_id": "3050d943-0aec-cca7-22c1-586f92591849",
-          "name": "Update Product Offer with Authorization copy",
+          "name": "Update Product Offer without Authorization",
           "request": {
             "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "PUT",
