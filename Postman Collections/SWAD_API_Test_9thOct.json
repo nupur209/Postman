@@ -2096,43 +2096,6 @@
           "response": []
         },
         {
-          "_postman_id": "00db1825-687d-7173-cc17-6985fc58a537",
-          "name": "Register Category with duplicate category",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});",
-                  "",
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "http://192.168.129.143:5000/api//category",
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
-            },
-            "description": null
-          },
-          "response": []
-        },
-        {
           "_postman_id": "e3ed0688-55b9-1617-a1d5-44ab1b2de300",
           "name": "Register Category copy",
           "event": [
@@ -2185,6 +2148,43 @@
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"category\": \"{{Cat}}\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
+            },
+            "description": null
+          },
+          "response": []
+        },
+        {
+          "_postman_id": "00db1825-687d-7173-cc17-6985fc58a537",
+          "name": "Register Category with duplicate category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api//category",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"category\": \"Mobile1\",\r\n  \"categorydescription\": \"Touch Screen1\"\r\n}"
             },
             "description": null
           },
