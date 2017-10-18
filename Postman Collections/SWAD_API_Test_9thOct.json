@@ -2436,16 +2436,18 @@
             "header": [
               {
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"IceCream\",\r\n    \"dessertRate\": \"Hello\"\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"Paneer\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"Tikka\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
+              "raw": "{\r\n  \"desserts\": {\r\n    \"dessert\": \"\",\r\n    \"dessertRate\": \"Hello\"\r\n  },\r\n  \"maincourses\": {\r\n    \"mainCourse\": \"\",\r\n    \"mainCourseRate\": 5000\r\n  },\r\n  \"starters\": {\r\n    \"starter\": \"\",\r\n    \"starterRate\": 500\r\n  }\r\n}"
             },
             "description": null
           },
