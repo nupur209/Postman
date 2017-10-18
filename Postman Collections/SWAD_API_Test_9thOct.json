@@ -3155,7 +3155,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Hello\",\r\n    \"updated_date\": \"121324231321\"\r\n  }\r\n}"
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Hello\",\r\n    \"updated_date\": \"1\"\r\n  }\r\n}"
             },
             "description": null
           },
