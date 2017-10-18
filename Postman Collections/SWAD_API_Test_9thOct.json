@@ -3097,6 +3097,50 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "398ea3a7-1c99-1f7c-1d84-2da56b392600",
+          "name": "Register Product Offer with valid inputs copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Summar Bononza\",\r\n    \"updated_date\": \"20170101\"\r\n  }\r\n}"
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
