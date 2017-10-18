@@ -3251,6 +3251,33 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "0e9330f5-5dc0-64da-65ec-d4f0cd3caecb",
+          "name": "Update Product Offer without Authorization copy",
+          "request": {
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}",
+                "description": "",
+                "disabled": true
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Winter Sale\"\r\n  }\r\n}"
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
