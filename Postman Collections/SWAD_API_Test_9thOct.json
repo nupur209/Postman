@@ -3561,7 +3561,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"\",\r\n  \"comment\": \"\",\r\n  \"creation_date\": \"\",\r\n  \"updated_date\": \"\"\r\n}"
+              "raw": "{\r\n  \"product\": \"\",\r\n  \"user\": \"\",\r\n  \"overall_rating\": \"\",\r\n  \"ambience_rating\": \"\",\r\n  \"service_rating\": \"\",\r\n  \"occasion\": \"\",\r\n  \"comment\": \"\",\r\n  \"creation_date\": \"20160606\",\r\n  \"updated_date\": \"20160606\"\r\n}"
             },
             "description": null
           },
