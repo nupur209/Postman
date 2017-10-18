@@ -3388,7 +3388,7 @@
         },
         {
           "_postman_id": "14efe377-56a9-5d84-a4d9-4037b2fc19ea",
-          "name": "getProductOfferByProductId copy",
+          "name": "getProductOfferByProductId  without authorization",
           "event": [
             {
               "listen": "test",
