@@ -3262,8 +3262,7 @@
               {
                 "key": "Authorization",
                 "value": "{{Token_Key}}",
-                "description": "",
-                "disabled": true
+                "description": ""
               },
               {
                 "key": "Content-Type",
@@ -3273,7 +3272,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"Winter Sale\"\r\n  }\r\n}"
+              "raw": "{\r\n  \"offers\": {\r\n    \"offer\": \"\"\r\n  }\r\n}"
             },
             "description": null
           },
