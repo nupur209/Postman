@@ -3202,6 +3202,24 @@
         {
           "_postman_id": "bc8604e1-3c5e-5c7c-f608-6d92d94f7877",
           "name": "Update Product Offer with Authorization",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});"
+                ]
+              }
+            }
+          ],
           "request": {
             "url": "http://192.168.129.143:5000/api/product/{{Prod}}/productOffer",
             "method": "PUT",
