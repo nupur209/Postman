@@ -389,6 +389,70 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "7cb6349c-a482-a2f2-9aeb-b53fc45eec35",
+          "name": "RegisterUsername_WithoutLastName copy copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Registration User without Last Name--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User validation failed: lastname: Path `lastname` is required.\");",
+                  "});",
+                  "",
+                  "",
+                  "",
+                  ""
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/user",
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"{{firstname}}\",\r\n  \"lastname\": \"\",\r\n  \"userid\": \"varunk\",\r\n  \"password\": \"123456\",\r\n  \"dateofbirth\": \"18121977\",\r\n  \"maritalstatus\": \"M\",\r\n  \"anniversary\": \"12122007\",\r\n  \"children\": \"1\",\r\n  \"addresses\": {\r\n    \"office\": {\r\n      \"oarea\": \"Noida\",\r\n      \"ocity\": \"Noida\",\r\n      \"ostate\": \"UP\",\r\n      \"ocountry\": \"India\",\r\n      \"opin\": \"201306\"\r\n    },\r\n    \"home\": {\r\n      \"harea\": \"249B Super MIG\",\r\n      \"hcity\": \"Noida\",\r\n      \"hstate\": \"UP\",\r\n      \"hcountry\": \"India\",\r\n      \"hpin\": \"201306\"\r\n    }\r\n  },\r\n  \"preferences\": {\r\n    \"areas\": [\r\n      {\r\n        \"area\": \"Noida\"\r\n      }\r\n    ],\r\n    \"cusienes\": [\r\n      {\r\n        \"cusiene\": \"Bengali\"\r\n      }\r\n    ],\r\n    \"ambiences\": [\r\n      {\r\n        \"ambience\": \"Good\"\r\n      }\r\n    ]\r\n  },\r\n  \"email\": \"varunkumarpce{{awb}}@gmail.com\",\r\n  \"phone\":  \"8130327785\",\r\n  \"creation_date\": \"18082017\",\r\n  \"updated_date\": \"01/09/2017\"\r\n}\r\n"
+            },
+            "description": null
+          },
+          "response": []
         }
       ]
     },
