@@ -3789,7 +3789,8 @@
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}"
+                "value": "{{Token_Key}}",
+                "disabled": true
               }
             ],
             "body": {
