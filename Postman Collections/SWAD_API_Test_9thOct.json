@@ -1,5 +1,4 @@
 {
-  "variables": [],
   "info": {
     "name": "SWAD_API_Test_9thOct",
     "_postman_id": "e5b8953e-8259-c0d9-b918-fa77b6e0fec8",
@@ -16,6 +15,23 @@
           "_postman_id": "d064e911-5d62-dbeb-89ac-5c297db73ea5",
           "name": "RegisterUser",
           "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
             {
               "listen": "test",
               "script": {
@@ -39,23 +55,6 @@
                   "pm.test(\"UserId Should be-----\"+jsonData.user.userid, function () {",
                   "    pm.expect(jsonData.user.userid).to.eql(jsonData.user.userid);",
                   "});",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
                   ""
                 ]
               }
@@ -83,6 +82,23 @@
           "name": "RegisterUser_WithoutPassword",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -101,23 +117,6 @@
                   "pm.test(\"Registration User without Password--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: password: Path `password` is required.\");",
                   "});",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
                   ""
                 ]
               }
@@ -145,6 +144,23 @@
           "name": "RegisterUsername_WithoutFirstName",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -161,23 +177,6 @@
                   "pm.test(\"Registration User without First name--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: firstname: Path `firstname` is required.\");",
                   "});",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
                   ""
                 ]
               }
@@ -205,6 +204,23 @@
           "name": "RegisterUsername_WithoutEmail",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -222,23 +238,6 @@
                   "pm.test(\"Registration User without Email Id--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `email` is required.\");",
                   "});"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
-                  ""
                 ]
               }
             }
@@ -265,6 +264,23 @@
           "name": "RegisterUsername_WithoutLastName",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -285,23 +301,6 @@
                   "",
                   "",
                   "",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
                   ""
                 ]
               }
@@ -329,6 +328,23 @@
           "name": "RegisterUsername_WithoutLastName copy",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -349,23 +365,6 @@
                   "",
                   "",
                   "",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
                   ""
                 ]
               }
@@ -393,6 +392,23 @@
           "name": "RegisterUsername_WithoutLastName copy copy",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"awb\", text);\r",
+                  "console.log(text);\r",
+                  "\r",
+                  "\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -413,23 +429,6 @@
                   "",
                   "",
                   "",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"awb\", text);\r",
-                  "console.log(text);\r",
-                  "\r",
-                  "\r",
                   ""
                 ]
               }
@@ -1066,6 +1065,21 @@
           "name": "RegisterProductUser",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1078,21 +1092,6 @@
                   "    pm.expect(pm.response.responseTime).to.be.below(200);",
                   "});",
                   "",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
                   ""
                 ]
               }
@@ -1120,6 +1119,21 @@
           "name": "RegisterProductUser_WithoutFirstName",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1136,21 +1150,6 @@
                   "pm.test(\"Registration User without First name--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: firstname: Path `firstname` is required.\");",
                   "});",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
                   ""
                 ]
               }
@@ -1178,6 +1177,21 @@
           "name": "RegisterProductUser_WithoutLastName",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1194,21 +1208,6 @@
                   "pm.test(\"Registration User without Last name--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: lastname: Path `lastname` is required.\");",
                   "});",
-                  ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
                   ""
                 ]
               }
@@ -1236,6 +1235,21 @@
           "name": "RegisterProductUser_WithoutEmailID",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1253,21 +1267,6 @@
                   "pm.test(\"Registration User without Email Id--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `email` is required.\");",
                   "});"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
-                  ""
                 ]
               }
             }
@@ -1294,6 +1293,21 @@
           "name": "RegisterProductUser_WithouttProductName",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1311,21 +1325,6 @@
                   "pm.test(\"Registration User without Product Name--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `ProductName` is required.\");",
                   "});"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
-                  ""
                 ]
               }
             }
@@ -1352,6 +1351,21 @@
           "name": "RegisterProductUser_WithoutPassword",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1369,21 +1383,6 @@
                   "pm.test(\"Registration User without Password-\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: email: Path `Password` is required.\");",
                   "});"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
-                  ""
                 ]
               }
             }
@@ -1410,6 +1409,21 @@
           "name": "RegisterProductUser_WithoutMandatoryFields",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
+                  "console.log(text);\r",
+                  ""
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -1427,21 +1441,6 @@
                   "pm.test(\"Registration User without Mandatory Fields--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: firstname: Path `firstname` is required., lastname: Path `lastname` is required., password: Path `password` is required., email: Path `email` is required., userid: Path `userid` is required.\");",
                   "});"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"prdt\", text);\r",
-                  "console.log(text);\r",
-                  ""
                 ]
               }
             }
@@ -2079,6 +2078,20 @@
           "name": "Register Category",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
+                  "console.log(text);"
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -2096,20 +2109,6 @@
                   "var cat=data.category.category",
                   "console.log(\"Category  is----\"+cat);",
                   "postman.setGlobalVariable(\"category\", cat);"
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
-                  "console.log(text);"
                 ]
               }
             }
@@ -2136,6 +2135,20 @@
           "name": "Register Category without Category",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
+                  "console.log(text);"
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -2154,20 +2167,6 @@
                   "    pm.expect(jsonData.message).to.eql(\"ProductCategory validation failed: category: Path `category` is required.\");",
                   "});",
                   ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
-                  "console.log(text);"
                 ]
               }
             }
@@ -2194,6 +2193,20 @@
           "name": "Register Category without category description",
           "event": [
             {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var text=\"ab\";\r",
+                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
+                  "    for( var i=0; i <4; i++ )\r",
+                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
+                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
+                  "console.log(text);"
+                ]
+              }
+            },
+            {
               "listen": "test",
               "script": {
                 "type": "text/javascript",
@@ -2212,20 +2225,6 @@
                   "    pm.expect(jsonData.message).to.eql(\"ProductCategory validation failed: categorydescription: Path `categorydescription` is required.\");",
                   "});",
                   ""
-                ]
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var text=\"ab\";\r",
-                  "var charset = \"abcdefghijklmnopqrstuvwxyz0123456789\";\r",
-                  "    for( var i=0; i <4; i++ )\r",
-                  "        text += charset.charAt(Math.floor(Math.random() * charset.length));    \r",
-                  "postman.setEnvironmentVariable(\"Cat\", text);\r",
-                  "console.log(text);"
                 ]
               }
             }
@@ -3655,8 +3654,7 @@
               },
               {
                 "key": "Authorization",
-                "value": "{{Token_Key}}",
-                "disabled": true
+                "value": "{{Token_Key}}"
               }
             ],
             "body": {
