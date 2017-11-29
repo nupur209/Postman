@@ -1014,7 +1014,12 @@
           ],
           "request": {
             "method": "GET",
-            "header": [],
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
             "body": {
               "mode": "raw",
               "raw": ""
