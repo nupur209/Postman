@@ -2848,7 +2848,7 @@
         },
         {
           "_postman_id": "6fda3524-8705-953d-0775-c85cb68a7a4d",
-          "name": "Register Attraction with invalid inputs copy",
+          "name": "Register Attraction with blank inputs",
           "event": [
             {
               "listen": "test",
