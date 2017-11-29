@@ -3035,7 +3035,7 @@
         },
         {
           "_postman_id": "b9c137de-9e5a-b211-b3fe-7e6d02b1511e",
-          "name": "Update with Invalid input  copy",
+          "name": "Update with blank input",
           "event": [
             {
               "listen": "test",
