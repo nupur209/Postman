@@ -2883,6 +2883,53 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "6fda3524-8705-953d-0775-c85cb68a7a4d",
+          "name": "Register Attraction with invalid inputs copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Attraction validation failed --\"+jsonData._message, function () {",
+                  "    pm.expect(jsonData._message).to.eql(\"Attraction validation failed\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 1 Get 1 free\",\r\n    \"attractionDate\": \"99/5/52017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"Navratri Special\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
         }
       ]
     },
