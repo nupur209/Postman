@@ -3032,6 +3032,56 @@
             "description": null
           },
           "response": []
+        },
+        {
+          "_postman_id": "b9c137de-9e5a-b211-b3fe-7e6d02b1511e",
+          "name": "Update with Invalid input  copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
+                  "});",
+                  "",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Unable to update attraction data--\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"Unable to update attraction data\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"Attractions\": {\r\n    \"attraction\": \"Buy 2 Get 1 free\",\r\n    \"attractionDate\": \"1209/2017\"\r\n  },\r\n  \"upcomingEvents\": {\r\n    \"upcomingEvent\": \"\",\r\n    \"eventdate\": \"22092017\"\r\n  },\r\n  \"updated_date\": \"22092017\"\r\n}"
+            },
+            "url": "http://192.168.129.143:5000/api/product/{{Prod}}/attraction",
+            "description": null
+          },
+          "response": []
         }
       ]
     },
