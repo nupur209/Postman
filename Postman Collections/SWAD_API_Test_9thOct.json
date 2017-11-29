@@ -2365,7 +2365,7 @@
       "item": [
         {
           "_postman_id": "83e7601c-4024-9f85-3a3e-0ad009250674",
-          "name": "RegisterMenu with Valid Input",
+          "name": "RegisterMenu with valid Input & Authorization",
           "event": [
             {
               "listen": "test",
