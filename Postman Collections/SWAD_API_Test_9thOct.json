@@ -3063,7 +3063,7 @@
         },
         {
           "_postman_id": "27920965-12ef-2e9d-3147-601860548746",
-          "name": "Get Attraction by Valid ProductID  wihout Authorization",
+          "name": "Get Attraction by Valid ProductID  without Authorization",
           "request": {
             "method": "GET",
             "header": [
